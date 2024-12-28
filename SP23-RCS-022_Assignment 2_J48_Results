@@ -1,1 +1,58 @@
+=== Run information ===
 
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     name_classification
+Instances:    100
+Attributes:   5
+              name_length
+              vowel_count
+              consonant_count
+              gender
+              output
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+gender = 0: 0 (18.0/4.0)
+gender = 1
+|   name_length <= 5
+|   |   consonant_count <= 2: 0 (27.0/6.0)
+|   |   consonant_count > 2: 1 (19.0/7.0)
+|   name_length > 5
+|   |   consonant_count <= 2: 1 (12.0/2.0)
+|   |   consonant_count > 2: 0 (24.0/10.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          65               65      %
+Incorrectly Classified Instances        35               35      %
+Kappa statistic                          0.2597
+Mean absolute error                      0.4365
+Root mean squared error                  0.4902
+Relative absolute error                 89.4811 %
+Root relative squared error             99.252  %
+Total Number of Instances              100     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.776    0.524    0.672      0.776    0.720      0.265    0.585     0.617     0
+                 0.476    0.224    0.606      0.476    0.533      0.265    0.585     0.542     1
+Weighted Avg.    0.650    0.398    0.644      0.650    0.642      0.265    0.585     0.585     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 45 13 |  a = 0
+ 22 20 |  b = 1
