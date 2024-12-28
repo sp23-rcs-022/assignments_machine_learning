@@ -56,3 +56,10 @@ Weighted Avg.    0.650    0.398    0.644      0.650    0.642      0.265    0.585
   a  b   <-- classified as
  45 13 |  a = 0
  22 20 |  b = 1
+
+Results Analysis:
+The model achieved a 65% accuracy, correctly classifying 65 out of 100 instances. 
+Additionally, the precision and recall for class 0 (female names) were higher than 
+for class 1 (male names), with a TP (True Positive) rate of 0.776 for class 0 compared 
+to 0.476 for class 1. This suggests that the model performed better at identifying female names than male names, 
+possibly due to an imbalance in the dataset or overlapping feature values.
